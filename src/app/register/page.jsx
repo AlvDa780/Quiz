@@ -8,7 +8,7 @@ export default function Index() {
   const [username, setUsername] = useState("");
 
   return (
-    <div className="mx-auto h-screen  container flex flex-col   space-y-5 justify-center items-center pt-8 ">
+    <div className="mx-auto h-screen container flex flex-col space-y-5 justify-center items-center pt-8 ">
       <h1 className="flex justify-center text-3xl">Register</h1>
 
       <div className="w-full  flex flex-col space-y-5 items-center justify-center">
