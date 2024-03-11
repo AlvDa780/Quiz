@@ -57,7 +57,7 @@ export default function Index() {
       </div>
 
       <div className='flex justify-end w-80 '>
-      <Link href="/Home"><MoveLeft   size={18} /></Link>
+      <Link href="/Home"><MoveLeft   size={26} /></Link>
       </div>
 
     </div>
