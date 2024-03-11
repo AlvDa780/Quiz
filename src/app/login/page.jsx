@@ -9,6 +9,7 @@ export default function Index() {
   const submit = () => {
     console.log("Hello");
   };
+  
   const user = {
     email: email,
     password: password,
