@@ -1,15 +1,18 @@
 "use client";
-import Link from 'next/link'
+import Link from "next/link";
 import React, { useState } from "react";
-import { AtSign, LockKeyhole, MoveLeft   } from "lucide-react";
+import { AtSign, LockKeyhole, MoveLeft } from "lucide-react";
 
 export default function Index() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const submit = () =>{
-    console.log("Hello")
-  }
-  
+  const submit = () => {
+    console.log("Hello");
+  };
+  const user = {
+    email: email,
+    password: password,
+  };
 
   return (
     <div className="mx-auto h-screen  container flex flex-col   space-y-5 justify-center items-center pt-8 ">
@@ -49,8 +52,10 @@ export default function Index() {
         </button>
       </div>
 
-      <div className='flex justify-end w-80 '>
-      <Link href="/Home">< MoveLeft size={26} /></Link>
+      <div className="flex justify-end w-80 ">
+        <Link href="/Home">
+          <MoveLeft size={26} />
+        </Link>
       </div>
     </div>
   );

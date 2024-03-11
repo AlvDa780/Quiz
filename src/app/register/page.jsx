@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { AtSign, LockKeyhole, User, MoveLeft  } from "lucide-react";
-import Link from 'next/link'
+import { AtSign, LockKeyhole, User, MoveLeft } from "lucide-react";
+import Link from "next/link";
 
 export default function Index() {
   const [email, setEmail] = useState("");
@@ -14,7 +14,7 @@ export default function Index() {
 
       <div className="w-full  flex flex-col space-y-5 items-center justify-center">
         <div className="w-80 flex items-center  border border-white pl-2 ">
-          <User  size={18} />
+          <User size={18} />
           <input
             className=" ml-1 pl-2 pt-1 pb-1 bg-black shadow appearance-none w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
             type="Email"
@@ -56,10 +56,11 @@ export default function Index() {
         </button>
       </div>
 
-      <div className='flex justify-end w-80 '>
-      <Link href="/Home"><MoveLeft   size={26} /></Link>
+      <div className="flex justify-end w-80 ">
+        <Link href="/Home">
+          <MoveLeft size={26} />
+        </Link>
       </div>
-
     </div>
   );
 }
