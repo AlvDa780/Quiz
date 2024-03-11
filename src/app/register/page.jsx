@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { AtSign, LockKeyhole, User  } from "lucide-react";
+import { AtSign, LockKeyhole, User, MoveLeft  } from "lucide-react";
+import Link from 'next/link'
 
 export default function Index() {
   const [email, setEmail] = useState("");
@@ -54,6 +55,11 @@ export default function Index() {
           Sign Up
         </button>
       </div>
+
+      <div className='flex justify-end w-80 '>
+      <Link href="/Home"><MoveLeft   size={18} /></Link>
+      </div>
+
     </div>
   );
 }

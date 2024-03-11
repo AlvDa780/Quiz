@@ -1,16 +1,21 @@
 "use client";
+import Link from 'next/link'
 import React, { useState } from "react";
-import { AtSign, LockKeyhole } from "lucide-react";
+import { AtSign, LockKeyhole, MoveLeft   } from "lucide-react";
 
 export default function Index() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const submit = () =>{
+    console.log("Hello")
+  }
+  
 
   return (
     <div className="mx-auto h-screen  container flex flex-col   space-y-5 justify-center items-center pt-8 ">
       <h1 className="flex justify-center text-3xl">Login</h1>
 
-      <div className="w-full  flex flex-col space-y-5 items-center justify-center">
+      <div className="flex flex-col space-y-5 items-center justify-center">
         <div className="w-80 flex items-center  border border-white pl-2 ">
           <AtSign size={18} />
           <input
@@ -38,9 +43,14 @@ export default function Index() {
         <button
           className="w-80 bg-green-400 pl-1 pr-1 pt-1 pb-1 "
           type="submit"
+          onClick={submit}
         >
           Login
         </button>
+      </div>
+
+      <div className='flex justify-end w-80 '>
+      <Link href="/Home"><MoveLeft   size={24} /></Link>
       </div>
     </div>
   );
