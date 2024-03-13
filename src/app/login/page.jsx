@@ -2,21 +2,29 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { AtSign, LockKeyhole, MoveLeft } from "lucide-react";
+import { supabase } from "../../utils/supabase";
 
 export default function Index() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const submit = () => {
-    console.log("Hello");
-  };
-  
-  const user = {
-    email: email,
-    password: password,
+
+  const submit = async () => {
+    const user = {
+      email: email,
+      password: password,
+    };
+
+    await supabase.from("users").insert(user);
   };
 
   return (
     <div className="mx-auto h-screen  container flex flex-col   space-y-5 justify-center items-center pt-8 ">
+      <div className="flex justify-start w-80">
+        <Link className="flex items-center " href="/home">
+          <MoveLeft className="pr-2" size={32} />
+          Home
+        </Link>
+      </div>
       <h1 className="flex justify-center text-3xl">Login</h1>
 
       <div className="flex flex-col space-y-5 items-center justify-center">
@@ -51,12 +59,6 @@ export default function Index() {
         >
           Login
         </button>
-      </div>
-
-      <div className="flex justify-end w-80 ">
-        <Link href="/Home">
-          <MoveLeft size={26} />
-        </Link>
       </div>
     </div>
   );

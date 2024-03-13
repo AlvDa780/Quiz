@@ -19,7 +19,7 @@ export default function Links() {
               Login
             </Link>
           </li>
-          <li className="bg-blue-400 border border-white pl-2 pr-2 pb-1 pt-1">
+          <li className="bg-blue-500 border border-white pl-2 pr-2 pb-1 pt-1">
             <Link
               className={`link ${pathname === "/about" ? "active" : ""}`}
               href="/register"
